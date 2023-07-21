@@ -1,0 +1,21 @@
+use("great-store")
+
+//ACTUALIZAR ATRIBUTOS con $set
+db.products.updateOne(
+    //query
+    {
+        _id: 1
+    },
+    //change => operator
+    {
+        $set: {
+            name: 'basura',
+            price: 1,
+            tags: ['useless', 'small'] //tambien puede añadir propiedades nuevas
+        }
+    }
+)
+
+
+// $set: "Sets the value of a field in a document."
+

@@ -1,0 +1,17 @@
+use("great-store")
+
+///INCREMENTO con $inc
+db.products.updateOne(
+    //query
+    {
+        _id: 1
+    },
+    //change => operator
+    {
+        $inc: {
+            price: 100
+        }
+    }
+)
+
+// $inc: "Increments the value of the field by the specified amount."

@@ -1,0 +1,30 @@
+use("great-store")
+
+db.products.drop() // drop() borra todos los documentos de toda una coleccion !cuidado :v!
+
+db.products.insertMany([
+    {
+      _id: 1,
+      name: "Raqueta",
+      price: 1000
+    },
+    {
+      _id: 2,
+      name: "Remera",
+      price: 500
+    },
+    {
+      _id: 1, //este no lo inserta, tiene id duplicado
+      name: "Pelota",
+      price: 20
+    },
+    {
+      _id: 3, //este tampoco lo inserta a apartir del error anterior no inserta mas, para evitar eso se usa "ordered: false"
+      name: "Remera",
+      price: 500
+    },
+],
+{ordered: false}//si hay duplicados no inserta ninguno, pero si se insertan los que no tienen duplicados
+)
+
+db.products.find()

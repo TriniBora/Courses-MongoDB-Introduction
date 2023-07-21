@@ -1,0 +1,2 @@
+use ("great-store")
+db.inventory.find()

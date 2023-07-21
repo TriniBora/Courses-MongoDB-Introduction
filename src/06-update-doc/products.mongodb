@@ -1,0 +1,34 @@
+use("great-store")
+
+db.products.drop()
+
+db.products.insertMany([
+    {
+      _id: 1,
+      name: "Raqueta",
+      price: 1000
+    },
+    {
+      _id: 2,
+      name: "Remera",
+      price: 500
+    },
+    {
+      _id: 3,
+      name: "Pelota",
+      price: 20
+    },
+    {
+      _id: 4,
+      name: "Buzo",
+      price: 1500
+    },
+    {
+      name: "Auto",
+      price: 15000
+    }
+],
+{ordered: false}
+)
+
+db.products.find()

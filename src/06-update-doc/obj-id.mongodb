@@ -1,0 +1,17 @@
+use("great-store")
+
+//BUSCAR Y MODIFICAR UN OBJETO CON ID AUTOGENERADO POR MONGO CON ObjectId()
+
+db.products.updateOne(
+  {
+    _id: ObjectId("64ba9ab066a0b7c2d565e09e")
+
+  },
+  {
+    $inc: {
+      price: 50
+    }
+  }
+)
+
+// Objectld: "Function to find a doc with objlD"
