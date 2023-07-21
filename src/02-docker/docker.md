@@ -1,9 +1,9 @@
-#Up mongo
+## Up mongo
 ```sh
 docker-compose up -d mongodb
 ```
 
-#Check
+## Check
 ```sh
 docker-compose ps
 ```

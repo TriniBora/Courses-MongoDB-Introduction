@@ -1,26 +1,43 @@
-# Comando para conectarnos al (contenedor) servicio existente de Mongo con Docker
-```docker-compose exec mongodb bash```
+## Connect to container
+```sh
+docker-compose exec mongodb bash
+```
 
-# Comando para conectarnos con mongosh
-```mongosh "mongodb+srv://usuario:password@mongodb101.xcvopof.mongodb.net/test"```
+## Connect with mongosh (Atlas)
+```sh
+mongosh "mongodb+srv://<usuario>:<password>@mongodb101.fl2xhxr.mongodb.net/"
+```
 
-# Comando para ver bases de datos disponibles
-```show dbs```
+## Connect with mongosh (Local)
+```sh
+mongosh "mongodb://<usuario>:<password>@localhost:27017/?authMechanism=DEFAULT&tls=false"
+```
 
-# Comando para ver colecciones disponibles
-```show collections```
+## Show databases
+```sh
+show dbs
+```
 
-# Comando para usar una BD especifica
-```use(dbName)```
+## Show collections
+```sh
+show collections
+```
 
-# Comando para usar una coleccion con Find
-```db.collectionName.find()```
+## Use database
+```sh
+use(dbName)
+```
 
+## Find all documents of a collection
+```sh
+db.collectionName.find()
+```
 
-# Para conectarse a mongo atlas
+## disconnect
+```sh
+.exit
+```
+```sh
+exit()
+```
 
-## Para desconectarse de la base de datos local o cualquiera utilizan:
-```.exit```
-```exit()```
-## Y luego vuelven a introducir el comando:
-```mongosh "[ Atlas url]"```
